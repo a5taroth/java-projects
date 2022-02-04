@@ -4,19 +4,18 @@ public class ProjectOne {
     
     public static void main(String[] args) throws IOException {
         
-        InputStreamReader In = new InputStreamReader(System.in);
-        BufferedReader StdIn = new BufferedReader(In);
+        BufferedReader BR = new BufferedReader(new InputStreamReader(System.in));
 
         double length, breadth;
 
         System.out.print("Enter the unit: ");
-        String unit = StdIn.readLine();
+        String unit = BR.readLine();
 
         System.out.print("Enter the req. length: ");
-        length = Double.parseDouble(StdIn.readLine());
+        length = Double.parseDouble(BR.readLine());
 
         System.out.print("Enter the req. breadth: ");
-        breadth = Double.parseDouble(StdIn.readLine());
+        breadth = Double.parseDouble(BR.readLine());
 
         double rectPerimeter = 2*(length + breadth);
         double squareEdge = rectPerimeter/4;
