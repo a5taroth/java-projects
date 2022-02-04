@@ -6,6 +6,8 @@ public class ProjectEight {
 
         BufferedReader BR = new BufferedReader(new InputStreamReader(System.in));
 
+        int numOne = 0, numTwo = 1, numThree;
+
         System.out.println("Input 1 to display the Fibonacci series for n terms.");
         System.out.println("Input 2 to display the sum of the series 1/1 + 1/3 + 1/5 + ... + 1/19.");
         System.out.println("");
@@ -14,19 +16,28 @@ public class ProjectEight {
         System.out.println("");
 
         switch (menuOption) {
+
             case "1": 
+
                 System.out.print("Enter any natural number: ");
                 int n = Integer.parseInt(BR.readLine());
 
-                int presentVal = 0;
+                System.out.print(numOne + ", " + numTwo);
 
-                for (int i = 0; i <= n; i++) {
-                    System.out.println((i + presentVal) + ", ");
+                for (int i = 2; i < n; i++) {
 
-                    presentVal += 1;
-                }
+                    numThree = numOne + numTwo;    
+                    numOne = numTwo;    
+                    numTwo = numThree;    
+                    System.out.print(", " + numThree);   
+                }   
+                
+                System.out.println("");
+
+                break;
 
             case "2":
+
                 int numerator = 1;
                 int denominator = 1;
 
@@ -38,7 +49,9 @@ public class ProjectEight {
                     denominator += 2;
                 }
 
-                System.out.println("The sum of the series 1 + 1/3 + 1/5 + ... + 1/19 is (approx.) " + String.format("%.2f", sum) + ".");
+                System.out.println("The sum of the series 1 + 1/3 + 1/5 + ... + 1/19 is (approx.) " + sum + ".");
+
+                break;
         }
     }
 }

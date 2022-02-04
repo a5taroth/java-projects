@@ -22,6 +22,6 @@ public class ProjectOne {
 
         double squareArea = squareEdge*squareEdge;
 
-        System.out.println("The area of the square with perimeter equivalent to the perimeter of a rectangle of given dimensions is " + squareArea + " " + unit + "squared.");
+        System.out.println("The area of the square with perimeter equivalent to the perimeter of a rectangle of given dimensions is " + squareArea + " " + unit + " squared.");
     }
 }
