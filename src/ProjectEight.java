@@ -38,8 +38,8 @@ public class ProjectEight {
 
             case "2":
 
-                int numerator = 1;
-                int denominator = 1;
+                double numerator = 1;
+                double denominator = 1;
 
                 double sum = 0d;
 
@@ -49,7 +49,7 @@ public class ProjectEight {
                     denominator += 2;
                 }
 
-                System.out.println("The sum of the series 1 + 1/3 + 1/5 + ... + 1/19 is (approx.) " + sum + ".");
+                System.out.println("The sum of the series 1 + 1/3 + 1/5 + ... + 1/19 is (approx.) " + String.format("%.2f", sum) + ".");
 
                 break;
         }
